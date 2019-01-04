@@ -1,3 +1,5 @@
 FROM microsoft/dotnet:2.1.6-aspnetcore-runtime-alpine
+ENV ASPNETCORE_URLS=http://*:8080
+
 RUN apk update && apk add --no-cache ca-certificates && rm -rf /var/cache/apk/*
 RUN apk add --no-cache curl
